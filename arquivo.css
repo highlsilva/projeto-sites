@@ -629,7 +629,7 @@ img.emoji {
 
 .elementor-6 .elementor-element.elementor-element-3c038e8:not(.elementor-motion-effects-element-type-background),
 .elementor-6 .elementor-element.elementor-element-3c038e8>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url(./imgs.site/imgBody3.jpeg);
+    background-image: url(./assets/imgs/site/imgBody3.jpeg);
 }
 
 
@@ -817,7 +817,7 @@ img.emoji {
 
 .elementor-6 .elementor-element.elementor-element-11e0d76:not(.elementor-motion-effects-element-type-background),
 .elementor-6 .elementor-element.elementor-element-11e0d76>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url(./imgs.site/Tatuagem.jpeg);
+    background-image: url(./assets/imgs/site/Tatuagem.jpeg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
