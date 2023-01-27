@@ -2237,22 +2237,22 @@
                                     <div class="elementor-widget-container">
                                         <div class="elementor-social-icons-wrapper elementor-grid">
                                             <span class="elementor-grid-item">
-                                                <a class="elementor-icon elementor-social-icon elementor-social-icon-jki-facebook-light elementor-repeater-item-605a83b"
+                                                <a id="iconHover" class="elementor-icon elementor-social-icon elementor-social-icon-jki-facebook-light elementor-repeater-item-605a83b"
                                                     href="https://www.facebook.com/" target="_blank">
                                                     <span class="elementor-screen-only">Jki-facebook-light</span>
-                                                    <img id="iconsPE" src="/icons.site/icons-telegram.png"></a>
+                                                    <img id="iconsPE" src="./icons.site/icons-telegram.png"></a>
                                             </span>
                                             <span class="elementor-grid-item">
-                                                <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-16cd9a1"
+                                                <a id="iconHover" class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-16cd9a1"
                                                     href="https://twitter.com/i/flow/consent_flow" target="_blank">
                                                     <span class="elementor-screen-only">Twitter</span>
-                                                    <img id="iconsPE" src="/icons.site/icons-instagram.png" alt=""> </a>
+                                                    <img id="iconsPE" src="./icons.site/icons-facebook.png" alt=""> </a>
                                             </span>
                                             <span class="elementor-grid-item">
-                                                <a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-repeater-item-76c6d80"
+                                                <a id="iconHover" class="elementor-icon elementor-social-icon elementor-social-icon-linkedin-in elementor-repeater-item-76c6d80"
                                                     href="https://www.facebook.com/" target="_blank">
                                                     <span class="elementor-screen-only">Linkedin-in</span>
-                                                    <img id="iconsPE" src="./icons.site/icons-facebook.png" alt=""> </a>
+                                                    <img id="iconsPE" src="./icons.site/icons-telegram.png" alt=""> </a>
                                             </span>
                                         </div>
                                     </div>
@@ -2479,7 +2479,7 @@
                                 border: none;
                             }
 
-                            .elementor-kit-3 a:hover {
+                            #iconHover:hover {
                                 background-color: #ff3939d1;
                                 color: red;
                                 cursor: pointer;
@@ -2704,6 +2704,11 @@
             .elementor-list-text {
                 margin-bottom: 28px;
             }
+            .elementor-widget-wrap .elementor-element.elementor-widget__width-auto, .elementor-widget-wrap .elementor-element.elementor-widget__width-initial {
+    max-width: 100%;
+    margin-left: 62%;
+    top: -45px;
+}
 
             @media (max-width: 767px) {
                 .elementor-6 .elementor-element.elementor-element-4286375>.elementor-element-populated {
