@@ -3,6 +3,7 @@ let messageLink =
 
 const file = document.getElementById("file");
 const anchor = document.getElementById("wpp_msg");
+const btn = document.getElementById("wpp_msg_btn");
 const pictureImage = document.querySelector(".picture__image");
 const pictureImageTxt = "";
 pictureImage.innerHTML = pictureImageTxt;
@@ -32,7 +33,7 @@ function changePicture(file) {
 file.addEventListener("change", async (ev) => {
   const files = [...ev.target.files];
   changePicture(files[0]);
-  files.forEach(async (image) => {
+  files.forEach(async (image, i) => {
     const formdata = new FormData();
 
     formdata.append("image", image);
@@ -43,10 +44,13 @@ file.addEventListener("change", async (ev) => {
       },
       body: formdata,
     })
-      .then((response) => response.json())
-      .then((res) => {
-        messageLink += "%20" + res.data.link;
-      });
+      .then(async (response) => response.json())
+      .then((res) => (messageLink += "%20" + res.data.link));
+    if (files.length == i + 1) {
+      anchor.href = messageLink;
+      anchor["aria-disabled"] = false;
+      console.log(anchor);
+      btn.disabled = false;
+    }
   });
-  anchor.href = messageLink;
 });
