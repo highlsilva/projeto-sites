@@ -2529,11 +2529,17 @@ ul {
     font-size: 19px;
     margin-left: 37px;
 }
-.elementor-widget-wrap .elementor-element.elementor-widget__width-auto, .elementor-widget-wrap .elementor-element.elementor-widget__width-initial {
+.elementor-widget-wrap .elementor-element.elementor-widget__width-auto {
     max-width: 100%;
     margin-left: 52%;
     top: -72px;
 }
+
+ .elementor-widget-wrap .elementor-element.elementor-widget__width-initial {
+    max-width: 100%;
+    margin-left: 3%;
+    top: 2px;
+ }
 /*outros trabalhos
 
 
