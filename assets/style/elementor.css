@@ -474,7 +474,7 @@ body {
 
 .elementor-6 .elementor-element.elementor-element-3c038e8:not(.elementor-motion-effects-element-type-background),
 .elementor-6 .elementor-element.elementor-element-3c038e8>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-  background-image: url(./assets/imgs/site/imgBody3.jpeg);
+  background-image: url(../imgs/site/imgBody3.jpeg);
 }
 
 
@@ -554,7 +554,7 @@ body {
 
 .elementor-widget:not(:last-child) {
   margin-bottom: 20px;
-  margin-left: 51px;
+  /* margin-left: 51px; */
 }
 
 .elementor-6 .elementor-element.elementor-element-4a3dcf6 {
@@ -654,7 +654,7 @@ body {
 
 .elementor-6 .elementor-element.elementor-element-11e0d76:not(.elementor-motion-effects-element-type-background),
 .elementor-6 .elementor-element.elementor-element-11e0d76>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-  background-image: url(./assets/imgs/site/Tatuagem.jpeg);
+  background-image: url(../imgs/site/tatuagem.jpeg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1543,6 +1543,6 @@ ul {
 .elementor-widget-wrap .elementor-element.elementor-widget__width-auto,
 .elementor-widget-wrap .elementor-element.elementor-widget__width-initial {
   max-width: 100%;
-  margin-left: 52%;
-  top: -72px;
+  /* margin-left: 52%;
+  top: -72px; */
 }

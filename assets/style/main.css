@@ -218,6 +218,20 @@ img.emoji {
     display: none;
 }
 
+.jkit-form-wrapper .email-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jkit-mailchimp-email .jkit-input-wrapper .input-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
 .picture {
     width: 591px;
     aspect-ratio: 16/9;
@@ -232,7 +246,9 @@ img.emoji {
     transition: color 300ms ease-in-out, background 300ms ease-in-out;
     outline: none;
     overflow: auto;
-    margin-left: 28px;
+    /* margin-left: 28px; */
+    min-width: 300px;
+    min-height: 150px;
     border-radius: 10px
 }
 
