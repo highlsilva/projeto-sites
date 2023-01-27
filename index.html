@@ -115,7 +115,9 @@
 </head>
 
 <!--LINK CSS AQUI -->
-<link rel="stylesheet" type="text/css" href="arquivo.css">
+<link rel="stylesheet" type="text/css" href="./assets/style/main.css">
+<link rel="stylesheet" type="text/css" href="./assets/style/elementor.css">
+<link rel="stylesheet" type="text/css" href="./assets/style/responsive.css">
 
 <body
 	class="home page-template page-template-elementor_canvas page page-id-6 jkit-color-scheme elementor-default elementor-template-canvas elementor-kit-3 elementor-page elementor-page-6 e--ua-blink e--ua-chrome e--ua-webkit jkit-nav-menu-loaded"
@@ -314,7 +316,7 @@
 												</li>
 												
 												<li id="btn" class="btn"
-													style="animation: 0.5s ease 0.728571s 1 normal forwards running navLinkFade;">
+													style="animation: 0.5s ease 0.728571s 1 normal forwards running navLinkFade; line-height: 24px;">
 													contato</li>
 
 											</ul>
@@ -345,224 +347,6 @@
 												</div>
 
 											</dialog>
-											<script>
-
-												class MobileNavbar {
-													constructor(mobileMenu, navList, navLinks) {
-														this.mobileMenu = document.querySelector(mobileMenu);
-														this.navList = document.querySelector(navList);
-														this.navLinks = document.querySelectorAll(navLinks);
-														this.activeClass = "active";
-
-														this.handleClick = this.handleClick.bind(this);
-													}
-													animateLinks() {
-														this.navLinks.forEach((link, index) => {
-															link.style.animation
-																? (link.style.animation = "")
-																: (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3
-																	}s`);
-														});
-													}
-
-													handleClick() {
-														this.navList.classList.toggle(this.activeClass);
-														this.mobileMenu.classList.toggle(this.activeClass);
-														this.animateLinks();
-													}
-
-													addClickEvent() {
-														this.mobileMenu.addEventListener("click", this.handleClick);
-													}
-
-													init() {
-														if (this.mobileMenu) {
-															this.addClickEvent();
-														}
-														return this;
-													}
-												}
-
-												const mobileNavbar = new MobileNavbar(
-													".mobile-menu",
-													".nav-list",
-													".nav-list li",
-												);
-												mobileNavbar.init();
-
-												const toggle = () => dialog.classList.toggle("animar");
-
-												btn.addEventListener("click", () => {
-													toggle();
-													times.addEventListener("click", toggle);
-												});
-
-											</script>
-											<!--<div class="jkit-menu-wrapper">
-										<div class="jkit-menu-container"> 
-											<ul id="menu-menu-1"
-												class="jkit-menu jkit-menu-direction-flex jkit-submenu-position-top">
-												<li id="menu-item-10"
-													class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-10">
-													<a href="https://templatekit.jegtheme.com/lyfes/"
-														aria-current="page">
-														<font style="vertical-align: inherit;">
-															<font style="vertical-align: inherit;">Casa</font>
-														</font>
-													</a></li>
-												<li id="menu-item-12"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12">
-													<a href="https://templatekit.jegtheme.com/lyfes/about/">
-														<font style="vertical-align: inherit;">
-															<font style="vertical-align: inherit;">Sobre</font>
-														</font>
-													</a></li>
-												<li id="menu-item-175"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175">
-													<a href="https://templatekit.jegtheme.com/lyfes/services/">
-														<font style="vertical-align: inherit;">
-															<font style="vertical-align: inherit;">Serviços</font>
-														</font>
-													</a></li>
-												<li id="menu-item-14"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-14">
-													<a href="#">
-														<font style="vertical-align: inherit;">
-															<font style="vertical-align: inherit;">Páginas</font>
-														</font><i aria-hidden="true"
-															class="jki jki-chevron-down-line"></i>
-													</a>
-													<ul class="sub-menu">
-														<li id="menu-item-649"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-649">
-															<a href="https://templatekit.jegtheme.com/lyfes/our-plans/">
-																<font style="vertical-align: inherit;">
-																	<font style="vertical-align: inherit;">Nossos planos
-																	</font>
-																</font>
-															</a></li>
-														<li id="menu-item-650"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-650">
-															<a
-																href="https://templatekit.jegtheme.com/lyfes/appointment/">
-																<font style="vertical-align: inherit;">
-																	<font style="vertical-align: inherit;">Compromisso
-																	</font>
-																</font>
-															</a></li>
-														<li id="menu-item-651"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-651">
-															<a href="https://templatekit.jegtheme.com/lyfes/faq/">
-																<font style="vertical-align: inherit;">
-																	<font style="vertical-align: inherit;">Perguntas
-																		frequentes</font>
-																</font>
-															</a></li>
-														<li id="menu-item-652"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-652">
-															<a href="https://templatekit.jegtheme.com/lyfes/404-page/">
-																<font style="vertical-align: inherit;">
-																	<font style="vertical-align: inherit;">página 404
-																	</font>
-																</font>
-															</a></li>
-													</ul>
-												</li>
-												<li id="menu-item-174"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-174">
-													<a href="#">
-														<font style="vertical-align: inherit;">
-															<font style="vertical-align: inherit;">blog</font>
-														</font><i aria-hidden="true"
-															class="jki jki-chevron-down-line"></i>
-													</a>
-													<ul class="sub-menu">
-														<li id="menu-item-634"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-634">
-															<a href="https://templatekit.jegtheme.com/lyfes/blog/">
-																<font style="vertical-align: inherit;">
-																	<font style="vertical-align: inherit;">blog</font>
-																</font>
-															</a></li>
-														<li id="menu-item-635"
-															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-635">
-															<a
-																href="https://templatekit.jegtheme.com/lyfes/2021/11/05/mind-mapping-for-mindfulness/">
-																<font style="vertical-align: inherit;">
-																	<font style="vertical-align: inherit;">Único blog
-																	</font>
-																</font>
-															</a></li>
-													</ul>
-												</li>
-												<li id="menu-item-13"
-													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13">
-													<a href="https://templatekit.jegtheme.com/lyfes/contact/">
-														<font style="vertical-align: inherit;">
-															<font style="vertical-align: inherit;">Contato</font>
-														</font>
-													</a></li>
-											</ul>
-												
-
-										</div>
-										<div class="jkit-nav-identity-panel">
-											<div class="jkit-nav-site-title"><a
-													href="https://templatekit.jegtheme.com/lyfes"
-													class="jkit-nav-logo"></a></div>
-											<button class="jkit-close-menu"><i aria-hidden="true"
-													class="fas fa-times"></i></button>
-										</div>
-									</div>
-									<div class="jkit-overlay"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-c59166a elementor-hidden-tablet elementor-hidden-mobile"
-					data-id="c59166a" data-element_type="column">
-					<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-7cdd367 elementor-shape-square e-grid-align-right elementor-grid-0 elementor-widget elementor-widget-social-icons"
-							data-id="7cdd367" data-element_type="widget" data-widget_type="social-icons.default">
-							<div class="elementor-widget-container">
-							
-							
-								aqui entrava o css
-
-
-								<div class="elementor-social-icons-wrapper elementor-grid">
-									<span class="elementor-grid-item">
-										<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-605a83b"
-											target="_blank">
-											<span class="elementor-screen-only">
-												<font style="vertical-align: inherit;">
-													<font style="vertical-align: inherit;">Instagram</font>
-												</font>
-											</span>
-											<i class="fab fa-instagram"></i> </a>
-									</span>
-									<span class="elementor-grid-item">
-										<a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-16cd9a1"
-											target="_blank">
-											<span class="elementor-screen-only">
-												<font style="vertical-align: inherit;">
-													<font style="vertical-align: inherit;">Twitter</font>
-												</font>
-											</span>
-											<i class="fab fa-twitter"></i> </a>
-									</span>
-									<span class="elementor-grid-item">
-										<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-76c6d80"
-											target="_blank">
-											<span class="elementor-screen-only">
-												<font style="vertical-align: inherit;">
-													<font style="vertical-align: inherit;">YouTube</font>
-												</font>
-											</span>
-											<i class="fab fa-youtube"></i> </a>
-									</span>
-								</div>-->
 								</div>
 							</div>
 						</div>
@@ -581,11 +365,6 @@
 							data-id="fb68a28" data-element_type="widget"
 							data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;_animation_delay&quot;:&quot;200&quot;,&quot;_position&quot;:&quot;absolute&quot;}"
 							data-widget_type="image.default">
-							<!--	<div class="elementor-widget-container">
-							<img width="195" height="246"
-									src="https://templatekit.jegtheme.com/lyfes/wp-content/uploads/sites/204/2021/11/Ornamen-star-1.png"
-									class="attachment-full size-full" alt="" loading="lazy"> 
-							</div>-->
 						</div>
 						<div class="elementor-element elementor-element-936e3c4 animated-slow elementor-widget elementor-widget-heading animated fadeInLeft"
 							data-id="936e3c4" data-element_type="widget"
@@ -1132,219 +911,6 @@
 				</div>
 			</div>
 		</section>
-
-		<!--<section
-			class="elementor-section elementor-top-section elementor-element elementor-element-4a3dcf6 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
-			data-id="4a3dcf6" data-element_type="section">
-			<div class="elementor-background-overlay"></div>
-			<div class="elementor-container elementor-column-gap-no">
-				
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-aa4184d"
-					data-id="aa4184d" data-element_type="column"
-					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-24e763b animated-slow elementor-invisible elementor-widget elementor-widget-jkit_heading"
-							data-id="24e763b" data-element_type="widget"
-							data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}"
-							data-widget_type="jkit_heading.default">
-							<div class="elementor-widget-container">
-								<div
-									class="jeg-elementor-kit jkit-heading  align-left align-tablet- align-mobile- jeg_module_6_10_638d475a737a6">
-									<div class="heading-section-title ">
-										<h2 class="heading-title">
-											<font style="vertical-align: inherit;">
-												<font style="vertical-align: inherit;">O que eu</font>
-											</font><span class="style-color"><span>
-													<font style="vertical-align: inherit;">
-														<font style="vertical-align: inherit;">Providenciar</font>
-													</font>
-												</span></span>
-										</h2>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-f3fb56e elementor-widget elementor-widget-text-editor"
-							data-id="f3fb56e" data-element_type="widget" data-widget_type="text-editor.default">
-							<div class="elementor-widget-container">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-								incididunt ut labore et dolore magna aliqua. Aliquam ut porttitor leo. </div>
-						</div>
-						<section
-							class="elementor-section elementor-inner-section elementor-element elementor-element-9989de1 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-							data-id="9989de1" data-element_type="section">
-							<div class="elementor-container elementor-column-gap-default">
-								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-edd2cf8"
-									data-id="edd2cf8" data-element_type="column">
-									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-868375c jkit-equal-height-disable elementor-widget elementor-widget-jkit_icon_box"
-											data-id="868375c" data-element_type="widget"
-											data-widget_type="jkit_icon_box.default">
-											<div class="elementor-widget-container">
-												<div
-													class="jeg-elementor-kit jkit-icon-box icon-position-left elementor-animation- jeg_module_6_11_638d475a758d7">
-													<div class="jkit-icon-box-wrapper hover-from-left">
-														<div class="icon-box icon-box-header elementor-animation-">
-															<div class="icon style-color"><img
-																	src="https://templatekit.jegtheme.com/lyfes/wp-content/uploads/sites/204/2021/11/Frame-13.png"
-																	alt="Identifying Passion"></div>
-														</div>
-														<div class="icon-box icon-box-body">
-															<h2 class="title">Identifying Passion</h2>
-															<p class="icon-box-description">Lorem ipsum dolor sit amet,
-																consectetur adipiscing elit, sed do eiusmod tempor.</p>
-															<div class="icon-box-button ">
-																<div class="btn-wrapper icon-position-after">
-																	<a href="" class="icon-box-link">Read more<i
-																			aria-hidden="true"
-																			class="jki jki-arrow-right-solid"></i></a>
-																</div>
-															</div>
-														</div>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-61fe2d4"
-									data-id="61fe2d4" data-element_type="column">
-									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-26900cd jkit-equal-height-disable elementor-widget elementor-widget-jkit_icon_box"
-											data-id="26900cd" data-element_type="widget"
-											data-widget_type="jkit_icon_box.default">
-											<div class="elementor-widget-container">
-												<div
-													class="jeg-elementor-kit jkit-icon-box icon-position-left elementor-animation- jeg_module_6_12_638d475a77e45">
-													<div class="jkit-icon-box-wrapper hover-from-left">
-														<div class="icon-box icon-box-header elementor-animation-">
-															<div class="icon style-color"><img
-																	src="https://templatekit.jegtheme.com/lyfes/wp-content/uploads/sites/204/2021/11/Frame-14.png"
-																	alt="Stress Control"></div>
-														</div>
-														<div class="icon-box icon-box-body">
-															<h2 class="title">Stress Control</h2>
-															<p class="icon-box-description">Lorem ipsum dolor sit amet,
-																consectetur adipiscing elit, sed do eiusmod tempor.</p>
-															<div class="icon-box-button ">
-																<div class="btn-wrapper icon-position-after">
-																	<a href="" class="icon-box-link">Read more<i
-																			aria-hidden="true"
-																			class="jki jki-arrow-right-solid"></i></a>
-																</div>
-															</div>
-														</div>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-						<section
-							class="elementor-section elementor-inner-section elementor-element elementor-element-33d8fb4 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-							data-id="33d8fb4" data-element_type="section">
-							<div class="elementor-container elementor-column-gap-default">
-								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-58045dc"
-									data-id="58045dc" data-element_type="column">
-									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-71dbe7f jkit-equal-height-disable elementor-widget elementor-widget-jkit_icon_box"
-											data-id="71dbe7f" data-element_type="widget"
-											data-widget_type="jkit_icon_box.default">
-											<div class="elementor-widget-container">
-												<div
-													class="jeg-elementor-kit jkit-icon-box icon-position-left elementor-animation- jeg_module_6_13_638d475a7a24e">
-													<div class="jkit-icon-box-wrapper hover-from-left">
-														<div class="icon-box icon-box-header elementor-animation-">
-															<div class="icon style-color"><img
-																	src="https://templatekit.jegtheme.com/lyfes/wp-content/uploads/sites/204/2021/11/Frame-15.png"
-																	alt="Problem Solving"></div>
-														</div>
-														<div class="icon-box icon-box-body">
-															<h2 class="title">Problem Solving</h2>
-															<p class="icon-box-description">Lorem ipsum dolor sit amet,
-																consectetur adipiscing elit, sed do eiusmod tempor.</p>
-															<div class="icon-box-button ">
-																<div class="btn-wrapper icon-position-after">
-																	<a href="" class="icon-box-link">Read more<i
-																			aria-hidden="true"
-																			class="jki jki-arrow-right-solid"></i></a>
-																</div>
-															</div>
-														</div>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d22dcbf"
-									data-id="d22dcbf" data-element_type="column">
-									<div class="elementor-widget-wrap elementor-element-populated">
-										<div class="elementor-element elementor-element-f7f8eb6 jkit-equal-height-disable elementor-widget elementor-widget-jkit_icon_box"
-											data-id="f7f8eb6" data-element_type="widget"
-											data-widget_type="jkit_icon_box.default">
-											<div class="elementor-widget-container">
-												<div
-													class="jeg-elementor-kit jkit-icon-box icon-position-left elementor-animation- jeg_module_6_14_638d475a7c7a6">
-													<div class="jkit-icon-box-wrapper hover-from-left">
-														<div class="icon-box icon-box-header elementor-animation-">
-															<div class="icon style-color"><img
-																	src="https://templatekit.jegtheme.com/lyfes/wp-content/uploads/sites/204/2021/11/Frame-16.png"
-																	alt="Growth Career"></div>
-														</div>
-														<div class="icon-box icon-box-body">
-															<h2 class="title">Growth Career</h2>
-															<p class="icon-box-description">Lorem ipsum dolor sit amet,
-																consectetur adipiscing elit, sed do eiusmod tempor.</p>
-															<div class="icon-box-button ">
-																<div class="btn-wrapper icon-position-after">
-																	<a href="" class="icon-box-link">Read more<i
-																			aria-hidden="true"
-																			class="jki jki-arrow-right-solid"></i></a>
-																</div>
-															</div>
-														</div>
-
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>  
-					</div>
-				</div>
-				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-703c675"
-					data-id="703c675" data-element_type="column"
-					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-b65f737 elementor-widget elementor-widget-spacer"
-							data-id="b65f737" data-element_type="widget" data-widget_type="spacer.default">
-							<div class="elementor-widget-container">
-								<div class="elementor-spacer">
-									<div class="elementor-spacer-inner"></div>
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-6b0b75d elementor-widget elementor-widget-spacer"
-							data-id="6b0b75d" data-element_type="widget" data-widget_type="spacer.default">
-							<div class="elementor-widget-container">
-								<div class="elementor-spacer">
-									<div class="elementor-spacer-inner"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>-->
-
 		<section
 			class="elementor-section elementor-top-section elementor-element elementor-element-4a3dcf6 elementor-section-full_width elementor-section-height-default elementor-section-height-default"
 			data-id="4a3dcf6" data-element_type="section">
@@ -2550,68 +2116,6 @@
 									</div>
 								</div>
 							</div>
-							<script>
-								const file = document.getElementById("file");
-								const anchor = document.getElementById("wpp_msg");
-								let messageLink =
-									"https://wa.me/5521968537550?text=Tenho%20interesse%20em%20agendar%20uma%20tatuagem%20%20%20arte%20desejada%20e%20medidas%20:";
-
-								file.addEventListener("change", async (ev) => {
-									const files = [...ev.target.files];
-									await files.forEach(async (image) => {
-										const formdata = new FormData();
-
-										formdata.append("image", image);
-										await fetch("https://api.imgur.com/3/image/", {
-											method: "post",
-											headers: {
-												Authorization: "Client-ID dfc040afe1f1695",
-											},
-											body: formdata,
-										})
-											.then((response) => response.json())
-											.then((res) => {
-												messageLink += "%20" + res.data.link;
-											});
-									});
-									anchor.href = messageLink;
-								});
-							</script>
-
-							<script>
-
-								const inputFile = document.querySelector("#file");
-								const pictureImage = document.querySelector(".picture__image");
-								const pictureImageTxt = "";
-								pictureImage.innerHTML = pictureImageTxt;
-
-								inputFile.addEventListener("change", function (e) {
-									const inputTarget = e.target;
-									const file = inputTarget.files[0];
-
-									if (file) {
-										const reader = new FileReader();
-
-										reader.addEventListener("load", function (e) {
-											const readerTarget = e.target;
-
-											const img = document.createElement("img");
-											img.src = readerTarget.result;
-											img.classList.add("picture__img");
-											document.getElementById("icons-upload").style = "display: none";
-
-
-											//pictureImage.innerHTML = "";
-											pictureImage.appendChild(img);
-										});
-
-										reader.readAsDataURL(file);
-									} else {
-										pictureImage.innerHTML = pictureImageTxt;
-									}
-								});
-
-							</script>
 
 							<!-- roda pé-->
 						</section>
@@ -2834,11 +2338,6 @@
 		<div class="status-message" style="display: none;"></div>
 	</div>
 
-
-
-
-
-
 	<div class="goog-te-spinner-pos">
 		<div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner"
 				width="96px" height="96px" viewBox="0 0 66 66">
@@ -2848,4 +2347,117 @@
 	</div>
 </body>
 
+<script>
+	class MobileNavbar {
+		constructor(mobileMenu, navList, navLinks) {
+			this.mobileMenu = document.querySelector(mobileMenu);
+			this.navList = document.querySelector(navList);
+			this.navLinks = document.querySelectorAll(navLinks);
+			this.activeClass = "active";
+
+			this.handleClick = this.handleClick.bind(this);
+		}
+		animateLinks() {
+			this.navLinks.forEach((link, index) => {
+				link.style.animation
+					? (link.style.animation = "")
+					: (link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3
+						}s`);
+			});
+		}
+
+		handleClick() {
+			this.navList.classList.toggle(this.activeClass);
+			this.mobileMenu.classList.toggle(this.activeClass);
+			this.animateLinks();
+		}
+
+		addClickEvent() {
+			this.mobileMenu.addEventListener("click", this.handleClick);
+		}
+
+		init() {
+			if (this.mobileMenu) {
+				this.addClickEvent();
+			}
+			return this;
+		}
+	}
+
+	const mobileNavbar = new MobileNavbar(
+		".mobile-menu",
+		".nav-list",
+		".nav-list li",
+	);
+	mobileNavbar.init();
+
+	const toggle = () => dialog.classList.toggle("animar");
+
+	btn.addEventListener("click", () => {
+		toggle();
+		times.addEventListener("click", toggle);
+	});
+</script>
+
+<script>
+	const file = document.getElementById("file");
+	const anchor = document.getElementById("wpp_msg");
+	let messageLink =
+		"https://wa.me/5521968537550?text=Tenho%20interesse%20em%20agendar%20uma%20tatuagem%20%20%20arte%20desejada%20e%20medidas%20:";
+
+	file.addEventListener("change", async (ev) => {
+		const files = [...ev.target.files];
+		await files.forEach(async (image) => {
+			const formdata = new FormData();
+
+			formdata.append("image", image);
+			await fetch("https://api.imgur.com/3/image/", {
+				method: "post",
+				headers: {
+					Authorization: "Client-ID dfc040afe1f1695",
+				},
+				body: formdata,
+			})
+				.then((response) => response.json())
+				.then((res) => {
+					messageLink += "%20" + res.data.link;
+				});
+		});
+		anchor.href = messageLink;
+	});
+</script>
+
+<script>
+	const inputFile = document.querySelector("#file");
+	const pictureImage = document.querySelector(".picture__image");
+	const pictureImageTxt = "";
+	pictureImage.innerHTML = pictureImageTxt;
+
+	inputFile.addEventListener("change", function (e) {
+		const inputTarget = e.target;
+		const file = inputTarget.files[0];
+
+		if (file) {
+			const reader = new FileReader();
+
+			reader.addEventListener("load", function (e) {
+				const readerTarget = e.target;
+
+				const img = document.createElement("img");
+				img.src = readerTarget.result;
+				img.classList.add("picture__img");
+				document.getElementById("icons-upload").style = "display: none";
+
+
+				//pictureImage.innerHTML = "";
+				pictureImage.appendChild(img);
+			});
+
+			reader.readAsDataURL(file);
+		} else {
+			pictureImage.innerHTML = pictureImageTxt;
+		}
+	});
+
+</script>
 </html>
